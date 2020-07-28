@@ -24,7 +24,7 @@ public class Main {
 		// "openWidget". We will need to hard-code specific methods of all other brands that we 
 		// need in the project. Remember that Samsung and Phillips have different classes and method 
 		// names to connect to a Wi-Fi and to open a widget. We will end up with a lot of boilerplate  
-		// source code that will have the same sequence of actions only with different classes/method names.
+		// code that will have the same sequence of actions only with different classes/method names.
 
 		Connector sonyConnector = new Connector();
 		SonySmartTv sonyInterface = sonyConnector.turnSonyTvOn();
