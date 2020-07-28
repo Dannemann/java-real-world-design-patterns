@@ -15,5 +15,5 @@
 	<artifactId>adapter</artifactId>
 
 	<name>Adapter</name>
-	<description>Adapter design pattern example.</description>
+	<description>Adapter structural design pattern example.</description>
 </project>
