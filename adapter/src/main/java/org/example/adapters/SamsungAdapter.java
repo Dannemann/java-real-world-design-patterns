@@ -1,58 +1,58 @@
 package org.example.adapters;
 
-import com.thirdparty.libs.samsung.SamsungSmartTV;
+import com.thirdparty.libs.samsung.SamsungSmartTv;
 
 /**
  * <p>Samsung adapter.</p>
  * <p>This is the <b>adapter</b> UML actor.</p>
  */
-public class SamsungAdapter implements TargetSmartTVInterface {
+public class SamsungAdapter implements TargetSmartTvInterface {
 
 	// -------------------------------------------------------------------------
 	// Fields:
 
-	private final SamsungSmartTV samsungSmartTVInterface;
+	private final SamsungSmartTv samsungSmartTv;
 
 	// -------------------------------------------------------------------------
 	// Constructors:
 
-	public SamsungAdapter(SamsungSmartTV samsungSmartTVInterface) {
-		this.samsungSmartTVInterface = samsungSmartTVInterface;
+	public SamsungAdapter(SamsungSmartTv samsungSmartTv) {
+		this.samsungSmartTv = samsungSmartTv;
 	}
 
 	// -------------------------------------------------------------------------
-	// TargetSmartTVInterface implementation:
+	// TargetSmartTvInterface implementation:
 
-	public void connectToTV() {
-		samsungSmartTVInterface.conn();
+	public void turnTvOn() {
+		samsungSmartTv.turnOn();
 	}
 
-	public void disconnectTV() {
-		samsungSmartTVInterface.disconn();
+	public void turnTvOff() {
+		samsungSmartTv.turnOff();
 	}
 
-	public void showMeny() {
-		samsungSmartTVInterface.openMenu();
+	public void showMenu() {
+		samsungSmartTv.openMenu();
 	}
 
 	public void startPlay(long startTime) {
-		samsungSmartTVInterface.startPlayback(startTime);
+		samsungSmartTv.startPlayback(startTime);
 	}
 
 	public void ffw(short speed) {
-		samsungSmartTVInterface.ffwPlayback(speed);
+		samsungSmartTv.ffwPlayback(speed);
 	}
 
 	public void rwn(short speed) {
-		samsungSmartTVInterface.rwnPlayback(speed);
+		samsungSmartTv.rwnPlayback(speed);
 	}
 
 	public void connectToWifi(String wifiName) {
-		samsungSmartTVInterface.wifiConn(wifiName);
+		samsungSmartTv.wifiConn(wifiName);
 	}
 
 	public void showWidget(String widgetID) {
-		samsungSmartTVInterface.showWidget(widgetID);
+		samsungSmartTv.showWidget(widgetID);
 	}
 
 	// -------------------------------------------------------------------------

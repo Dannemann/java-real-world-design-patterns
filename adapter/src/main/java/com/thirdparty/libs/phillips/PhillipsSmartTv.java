@@ -1,19 +1,21 @@
 package com.thirdparty.libs.phillips;
 
 /**
- * <p>Imagine that this class is provided by Phillips for you to connect and call commands on a Phillips smart TV.</p>
+ * <p>Imagine that this class is provided by Phillips for you to call commands on a Phillips smart TV. In the real
+ * world, you would not have access to this class source code and it would be packed in a JAR file provided by Phillips.
+ * You would need then to add it as a dependency to your project.</p>
  * <p>This is the <b>adaptee</b> UML actor.</p>
  */
-public class PhillipsSmartTV {
+public class PhillipsSmartTv {
 
-	public void connect() {
+	public void on() {
 		// Phillips specific implementation...
-		System.out.println("Phillips smart TV connected");
+		System.out.println("Phillips smart TV is on");
 	}
 
-	public void disconnect() {
+	public void off() {
 		// Phillips specific implementation...
-		System.out.println("Phillips smart TV disconnected");
+		System.out.println("Phillips smart TV is off");
 	}
 
 	public void menu() {

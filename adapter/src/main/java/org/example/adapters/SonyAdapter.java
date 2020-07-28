@@ -1,20 +1,20 @@
 package org.example.adapters;
 
 import com.thirdparty.libs.sony.Connector;
-import com.thirdparty.libs.sony.SonySmartTV;
+import com.thirdparty.libs.sony.SonySmartTv;
 
 /**
  * <p>Sony adapter.</p>
  * <p>This is the <b>adapter</b> UML actor.</p>
  */
-public class SonyAdapter implements TargetSmartTVInterface {
+public class SonyAdapter implements TargetSmartTvInterface {
 
 	// -------------------------------------------------------------------------
 	// Fields:
 
 	private final Connector sonyConnector;
 
-	private SonySmartTV sonySmartTVInterface;
+	private SonySmartTv sonySmartTv;
 
 	// -------------------------------------------------------------------------
 	// Constructors:
@@ -24,38 +24,38 @@ public class SonyAdapter implements TargetSmartTVInterface {
 	}
 
 	// -------------------------------------------------------------------------
-	// TargetSmartTVInterface implementation:
+	// TargetSmartTvInterface implementation:
 
-	public void connectToTV() {
-		sonySmartTVInterface = sonyConnector.connectToTV();
+	public void turnTvOn() {
+		sonySmartTv = sonyConnector.turnSonyTvOn();
 	}
 
-	public void disconnectTV() {
-		sonyConnector.disconnect();
+	public void turnTvOff() {
+		sonyConnector.turnSonyTvOff();
 	}
 
-	public void showMeny() {
-		sonySmartTVInterface.openMenu();
+	public void showMenu() {
+		sonySmartTv.openMenu();
 	}
 
 	public void startPlay(long startTime) {
-		sonySmartTVInterface.play(startTime);
+		sonySmartTv.play(startTime);
 	}
 
 	public void ffw(short speed) {
-		sonySmartTVInterface.fastForwardPlayback(speed);
+		sonySmartTv.fastForwardPlayback(speed);
 	}
 
 	public void rwn(short speed) {
-		sonySmartTVInterface.rewindPlayback(speed);
+		sonySmartTv.rewindPlayback(speed);
 	}
 
 	public void connectToWifi(String wifiName) {
-		sonySmartTVInterface.connectToWifi(wifiName);
+		sonySmartTv.connectToWifi(wifiName);
 	}
 
 	public void showWidget(String widgetID) {
-		sonySmartTVInterface.openWidget(widgetID);
+		sonySmartTv.openWidget(widgetID);
 	}
 
 	// -------------------------------------------------------------------------

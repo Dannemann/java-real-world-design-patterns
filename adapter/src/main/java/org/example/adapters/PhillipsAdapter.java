@@ -1,58 +1,58 @@
 package org.example.adapters;
 
-import com.thirdparty.libs.phillips.PhillipsSmartTV;
+import com.thirdparty.libs.phillips.PhillipsSmartTv;
 
 /**
  * <p>Phillips adapter.</p>
  * <p>This is the <b>adapter</b> UML actor.</p>
  */
-public class PhillipsAdapter implements TargetSmartTVInterface {
+public class PhillipsAdapter implements TargetSmartTvInterface {
 
 	// -------------------------------------------------------------------------
 	// Fields:
 
-	private final PhillipsSmartTV phillipsSmartTVInterface;
+	private final PhillipsSmartTv phillipsSmartTv;
 
 	// -------------------------------------------------------------------------
 	// Constructors:
 
-	public PhillipsAdapter(PhillipsSmartTV phillipsSmartTVInterface) {
-		this.phillipsSmartTVInterface = phillipsSmartTVInterface;
+	public PhillipsAdapter(PhillipsSmartTv phillipsSmartTv) {
+		this.phillipsSmartTv = phillipsSmartTv;
 	}
 
 	// -------------------------------------------------------------------------
-	// TargetSmartTVInterface implementation:
+	// TargetSmartTvInterface implementation:
 
-	public void connectToTV() {
-		phillipsSmartTVInterface.connect();
+	public void turnTvOn() {
+		phillipsSmartTv.on();
 	}
 
-	public void disconnectTV() {
-		phillipsSmartTVInterface.disconnect();
+	public void turnTvOff() {
+		phillipsSmartTv.off();
 	}
 
-	public void showMeny() {
-		phillipsSmartTVInterface.menu();
+	public void showMenu() {
+		phillipsSmartTv.menu();
 	}
 
 	public void startPlay(long startTime) {
-		phillipsSmartTVInterface.startPlay(startTime);
+		phillipsSmartTv.startPlay(startTime);
 	}
 
 	public void ffw(short speed) {
-		phillipsSmartTVInterface.ffw(speed);
+		phillipsSmartTv.ffw(speed);
 	}
 
 	public void rwn(short speed) {
-		phillipsSmartTVInterface.rwn(speed);
+		phillipsSmartTv.rwn(speed);
 	}
 
 	public void connectToWifi(String wifiName) {
-		phillipsSmartTVInterface.connectWifi(wifiName);
+		phillipsSmartTv.connectWifi(wifiName);
 	}
 
 	public void showWidget(String widgetID) {
-		phillipsSmartTVInterface.showWidget(widgetID);
+		phillipsSmartTv.showWidget(widgetID);
 	}
 
 	// -------------------------------------------------------------------------
