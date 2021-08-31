@@ -1,3 +1,3 @@
-Adapter design pattern (structural).
+# Adapter design pattern (structural)
 
 

@@ -9,21 +9,14 @@ import com.thirdparty.libs.sony.SonySmartTv;
  */
 public class SonyAdapter implements TargetSmartTvInterface {
 
-	// -------------------------------------------------------------------------
-	// Fields:
-
 	private final Connector sonyConnector;
 
 	private SonySmartTv sonySmartTv;
-
-	// -------------------------------------------------------------------------
-	// Constructors:
 
 	public SonyAdapter(Connector sonyConnector) {
 		this.sonyConnector = sonyConnector;
 	}
 
-	// -------------------------------------------------------------------------
 	// TargetSmartTvInterface implementation:
 
 	public void turnTvOn() {
@@ -58,5 +51,4 @@ public class SonyAdapter implements TargetSmartTvInterface {
 		sonySmartTv.openWidget(widgetID);
 	}
 
-	// -------------------------------------------------------------------------
 }

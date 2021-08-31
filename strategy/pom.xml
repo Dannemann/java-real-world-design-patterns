@@ -12,8 +12,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>adapter</artifactId>
+	<artifactId>strategy</artifactId>
 
-	<name>Adapter</name>
-	<description>Adapter structural design pattern real world example.</description>
+	<name>Strategy</name>
+	<description>Strategy behavioral design pattern real world example.</description>
 </project>

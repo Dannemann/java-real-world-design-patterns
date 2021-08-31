@@ -8,19 +8,12 @@ import com.thirdparty.libs.samsung.SamsungSmartTv;
  */
 public class SamsungAdapter implements TargetSmartTvInterface {
 
-	// -------------------------------------------------------------------------
-	// Fields:
-
 	private final SamsungSmartTv samsungSmartTv;
-
-	// -------------------------------------------------------------------------
-	// Constructors:
 
 	public SamsungAdapter(SamsungSmartTv samsungSmartTv) {
 		this.samsungSmartTv = samsungSmartTv;
 	}
 
-	// -------------------------------------------------------------------------
 	// TargetSmartTvInterface implementation:
 
 	public void turnTvOn() {
@@ -55,5 +48,4 @@ public class SamsungAdapter implements TargetSmartTvInterface {
 		samsungSmartTv.showWidget(widgetID);
 	}
 
-	// -------------------------------------------------------------------------
 }

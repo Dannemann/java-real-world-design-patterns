@@ -8,19 +8,12 @@ import com.thirdparty.libs.phillips.PhillipsSmartTv;
  */
 public class PhillipsAdapter implements TargetSmartTvInterface {
 
-	// -------------------------------------------------------------------------
-	// Fields:
-
 	private final PhillipsSmartTv phillipsSmartTv;
-
-	// -------------------------------------------------------------------------
-	// Constructors:
 
 	public PhillipsAdapter(PhillipsSmartTv phillipsSmartTv) {
 		this.phillipsSmartTv = phillipsSmartTv;
 	}
 
-	// -------------------------------------------------------------------------
 	// TargetSmartTvInterface implementation:
 
 	public void turnTvOn() {
@@ -55,5 +48,4 @@ public class PhillipsAdapter implements TargetSmartTvInterface {
 		phillipsSmartTv.showWidget(widgetID);
 	}
 
-	// -------------------------------------------------------------------------
 }

@@ -7,14 +7,26 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.example</groupId>
-	<artifactId>java-design-patterns</artifactId>
+	<artifactId>java-oo-design-patterns</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Java Design Patterns</name>
-	<description>Java design patterns examples</description>
+	<name>Java OO Design Patterns - Real world examples</name>
+	<description>Some real world examples of the main OO Java design patterns.</description>
+
+	<developers>
+		<developer>
+			<name>Jean Dannemann Carone</name>
+			<email>https://www.linkedin.com/in/jeandannemann</email>
+			<url>https://github.com/Dannemann</url>
+			<roles>
+				<role>Author</role>
+			</roles>
+		</developer>
+	</developers>
 
 	<modules>
 		<module>adapter</module>
+		<module>strategy</module>
 	</modules>
 </project>
