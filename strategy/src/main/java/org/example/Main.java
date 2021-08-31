@@ -18,8 +18,8 @@ public class Main {
 		Double gpsPositionTo = 02349209237478d;
 
 		// Creating the context object.
-		RouteCalculatorContext routeCalculatorContext = new RouteCalculatorContext(gpsPositionFrom, gpsPositionTo,
-				transportationType.getRouteCalculator());
+		RouteCalculatorContext routeCalculatorContext = new RouteCalculatorContext(
+				gpsPositionFrom, gpsPositionTo, transportationType.getRouteCalculator());
 
 		// Calculating the route to the selected transportation type.
 		Route route = routeCalculatorContext.calculate();
