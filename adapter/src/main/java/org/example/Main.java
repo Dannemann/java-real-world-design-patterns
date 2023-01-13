@@ -11,7 +11,7 @@ import com.thirdparty.libs.sony.Connector;
 import com.thirdparty.libs.sony.SonySmartTv;
 
 /**
- * <p>This is the <b>client</b> UML actor.</p>
+ * This is the <b>client</b> UML actor.
  */
 public class Main {
 
