@@ -6,13 +6,13 @@ import com.google.maps.routing.models.TransportType;
 
 /**
  * <p>This is the <b>client</b> UML actor.</p>
- * <p>Notice how we decoupled the whole Strategy in package
+ * <p>Notice how we decoupled the whole Strategy inside package
  * <code>com.google.maps.*</code>. It could easily be in another JAR.</p>
  */
 public class Main {
 
 	public static void main(String[] args) {
-		// This information will usually come from the GUI.
+		// This information will usually come from the UI.
 		TransportType transportationType = TransportType.FOOT;
 		Double gpsPositionFrom = 43348589345435d;
 		Double gpsPositionTo = 02349209237478d;
