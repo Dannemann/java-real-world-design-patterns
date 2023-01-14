@@ -7,11 +7,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.example</groupId>
-	<artifactId>java-oo-design-patterns</artifactId>
+	<artifactId>java-oo-design-patterns-irl</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Java OO Design Patterns - Real world examples</name>
+	<name>Java OO Design Patterns In Real Life - Real world examples</name>
 	<description>Some real world examples of the main OO Java design patterns.</description>
 
 	<developers>

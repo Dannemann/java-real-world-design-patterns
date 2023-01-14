@@ -8,7 +8,7 @@
 
 	<parent>
 		<groupId>org.example</groupId>
-		<artifactId>java-oo-design-patterns</artifactId>
+		<artifactId>java-oo-design-patterns-irl</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
