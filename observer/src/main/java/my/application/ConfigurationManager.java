@@ -1,10 +1,10 @@
-package org.example;
+package my.application;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.example.configurators.Configurator;
+import my.application.configurators.Configurator;
 
 /**
  * This is the <b>subject/publisher</b> UML actor.

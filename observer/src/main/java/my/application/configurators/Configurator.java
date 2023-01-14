@@ -1,4 +1,4 @@
-package org.example.configurators;
+package my.application.configurators;
 
 import java.util.Map;
 

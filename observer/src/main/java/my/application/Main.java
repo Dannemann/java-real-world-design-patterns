@@ -1,10 +1,10 @@
-package org.example;
+package my.application;
 
 import java.util.HashMap;
 
-import org.example.configurators.MobileConfigurator;
-import org.example.configurators.OtherDevicesConfigurator;
-import org.example.configurators.PcConfigurator;
+import my.application.configurators.MobileConfigurator;
+import my.application.configurators.OtherDevicesConfigurator;
+import my.application.configurators.PcConfigurator;
 
 /**
  * <p>
