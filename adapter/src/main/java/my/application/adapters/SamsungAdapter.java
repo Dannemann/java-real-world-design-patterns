@@ -1,6 +1,6 @@
-package org.example.adapters;
+package my.application.adapters;
 
-import com.thirdparty.libs.samsung.SamsungSmartTv;
+import com.smarttv.libs.samsung.SamsungSmartTv;
 
 /**
  * <p>Samsung adapter.</p>

@@ -1,14 +1,14 @@
-package org.example;
+package my.application;
 
-import org.example.adapters.PhillipsAdapter;
-import org.example.adapters.SamsungAdapter;
-import org.example.adapters.SonyAdapter;
-import org.example.adapters.TargetSmartTvInterface;
+import com.smarttv.libs.phillips.PhillipsSmartTv;
+import com.smarttv.libs.samsung.SamsungSmartTv;
+import com.smarttv.libs.sony.Connector;
+import com.smarttv.libs.sony.SonySmartTv;
 
-import com.thirdparty.libs.phillips.PhillipsSmartTv;
-import com.thirdparty.libs.samsung.SamsungSmartTv;
-import com.thirdparty.libs.sony.Connector;
-import com.thirdparty.libs.sony.SonySmartTv;
+import my.application.adapters.PhillipsAdapter;
+import my.application.adapters.SamsungAdapter;
+import my.application.adapters.SonyAdapter;
+import my.application.adapters.TargetSmartTvInterface;
 
 /**
  * This is the <b>client</b> UML actor.

@@ -1,6 +1,6 @@
-package org.example.adapters;
+package my.application.adapters;
 
-import com.thirdparty.libs.phillips.PhillipsSmartTv;
+import com.smarttv.libs.phillips.PhillipsSmartTv;
 
 /**
  * <p>Phillips adapter.</p>

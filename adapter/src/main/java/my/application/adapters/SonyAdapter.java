@@ -1,7 +1,7 @@
-package org.example.adapters;
+package my.application.adapters;
 
-import com.thirdparty.libs.sony.Connector;
-import com.thirdparty.libs.sony.SonySmartTv;
+import com.smarttv.libs.sony.Connector;
+import com.smarttv.libs.sony.SonySmartTv;
 
 /**
  * <p>Sony adapter.</p>

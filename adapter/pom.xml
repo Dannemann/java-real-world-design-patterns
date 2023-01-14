@@ -7,7 +7,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.example</groupId>
+		<groupId>com.jeandannemann</groupId>
 		<artifactId>java-oo-design-patterns-irl</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
