@@ -8,10 +8,10 @@ import org.example.configurators.PcConfigurator;
 
 /**
  * <p>
- * Imagine that we are writing an application that can change its internal
- * settings at runtime, making necessary specific back-end configurations for
- * client platforms like PC, mobile, and other devices. So, that means each time
- * we change the application global properties (its state), a set of specific
+ * Imagine you are writing an application that can change its internal settings
+ * at runtime, making necessary specific back-end configurations for client
+ * platforms like PC, mobile, and other devices. So, that means each time we
+ * change the application global properties (its state), a set of specific
  * back-end tasks should be executed for each client platform in order to update
  * its server configuration. The Observer design pattern fits very well in this
  * situation because it enables us to listen to these application state changes
