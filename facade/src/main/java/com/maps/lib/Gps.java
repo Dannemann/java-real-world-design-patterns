@@ -1,4 +1,4 @@
-package com.maps.library;
+package com.maps.lib;
 
 /**
  * <p>Imagine that this package and class are supplied by the cumbersome

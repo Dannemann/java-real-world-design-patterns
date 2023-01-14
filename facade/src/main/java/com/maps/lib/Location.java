@@ -1,4 +1,4 @@
-package com.maps.library;
+package com.maps.lib;
 
 /**
  * <p>Imagine that this package and class are supplied by the cumbersome
@@ -7,13 +7,13 @@ package com.maps.library;
  * of these objects in other classes of your project.</p>
  * <p>This is a <b>subsystem</b> UML actor.</p>
  */
-public class Map {
+public class Location {
 
-	public void method1(int arg1, String arg2) {
+	public void method1(String arg1, String arg2) {
 		// Implementation...
 	}
 
-	public void method2(int arg1) {
+	public void method2(String arg1) {
 		// Implementation...
 	}
 
@@ -26,7 +26,19 @@ public class Map {
 		// Implementation...
 	}
 
-	public void method5(String arg1) {
+	public void method5() {
+		// Implementation...
+	}
+
+	public void method6() {
+		// Implementation...
+	}
+
+	public void method7(boolean arg1, Long arg2, boolean arg3) {
+		// Implementation...
+	}
+
+	public void method8(Long arg1) {
 		// Implementation...
 	}
 

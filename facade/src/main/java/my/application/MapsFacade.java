@@ -1,8 +1,8 @@
 package my.application;
 
-import com.maps.library.Gps;
-import com.maps.library.Location;
-import com.maps.library.Map;
+import com.maps.lib.Gps;
+import com.maps.lib.Location;
+import com.maps.lib.Map;
 
 /**
  * <p>This class will be our facade to the complexity and boilerplate of the maps
