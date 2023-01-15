@@ -1,8 +1,8 @@
 package my.application;
 
 /**
- * This is currently the recommended way to write a Singleton. Handles
- * serialization and avoids reflection attacks.
+ * This is currently the recommended way to write a Singleton class. More
+ * limited but handles serialization and avoids reflection attacks.
  */
 public enum BackgroundImages {
 
