@@ -29,7 +29,7 @@
 		<module>adapter</module>
 		<module>facade</module>
 		<module>observer</module>
-		<module>state</module>
+		<module>singleton</module>
 		<module>strategy</module>
 	</modules>
 </project>

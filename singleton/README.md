@@ -1,0 +1,3 @@
+# Singleton creational pattern (structural)
+
+
