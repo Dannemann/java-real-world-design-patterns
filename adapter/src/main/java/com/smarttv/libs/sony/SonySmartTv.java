@@ -13,8 +13,6 @@ public class SonySmartTv {
 	// You need to use the Connector class first to turn the TV on and obtain an instance of this class.
 	// I made this to show you that you can adapt more than one class if needed.
 
-	// Notice that the constructor is not public.
-	// By doing this, Sony requires you to instantiate this class only through the Connector class.
 	SonySmartTv() {
 	}
 

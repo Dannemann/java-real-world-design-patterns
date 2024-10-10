@@ -14,66 +14,61 @@ import my.application.adapters.TargetSmartTvInterface;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("NOT USING AN ADAPTER.");
-        // Note that we are hard-coding brand-specific methods like connectToWifi()
-        // and openWidget(). We'll need to call brand-specific methods for all other
-        // TV brands used in the project. Keep in mind that Samsung and Philips have
-        // different classes and method names for Wi-Fi connectivity and widget
-        // management.
+	public static void main(String[] args) {
+		// With the Adapter pattern we abstract all the operations that are common to
+		// all smart TVs. Therefore, we do not need to hard-code any vendor specific
+		// implementations because they are all hidden by TargetSmartTvInterface.
+		// BUT REMEMBER: ONLY use the Adapter pattern if you have multiple different
+		// implementations of the same logical operations, as seen with smart TVs.
 
-        Connector sonyConnector = new Connector();
-        SonySmartTv sonyInterface = sonyConnector.turnSonyTvOn();
-        sonyInterface.connectToWifi(userSelectedWifi());
-        sonyInterface.openWidget("wifi.connected.notificator"); // Sony specific widget name.
-        sonyInterface.play(0);
+		PhillipsAdapter phillipsAdapter = new PhillipsAdapter(new PhillipsSmartTv());
+		connectWifiAndPlay(phillipsAdapter, "some.phillips.widget");
 
-        PhillipsSmartTv phillipsSmartTv = new PhillipsSmartTv();
-        phillipsSmartTv.on();
-        phillipsSmartTv.connectWifi(userSelectedWifi());
-        phillipsSmartTv.showWidget("wifinotifier"); // Phillips specific widget name.
-        phillipsSmartTv.startPlay(0);
+		SamsungAdapter samsungAdapter = new SamsungAdapter(new SamsungSmartTv());
+		connectWifiAndPlay(samsungAdapter, "some.samsung.widget");
 
-        SamsungSmartTv samsungSmartTv = new SamsungSmartTv();
-        samsungSmartTv.turnOn();
-        samsungSmartTv.wifiConn(userSelectedWifi());
-        samsungSmartTv.showWidget("wifi.notificator"); // Samsung specific widget name.
-        samsungSmartTv.startPlayback(0);
+		SonyAdapter sonyAdapter = new SonyAdapter(new Connector());
+		connectWifiAndPlay(sonyAdapter, "some.sony.widget");
 
 
-        System.out.println("\n\nWITH AN ADAPTER.");
-        // With the Adapter pattern we abstract all the operations that are common to
-        // all smart TVs. Now, we do not need to hard-code vendor specific
-        // implementations because they are all hidden by TargetSmartTvInterface.
-        // BUT REMEMBER: ONLY use the Adapter pattern if you have multiple different
-        // implementations of the same logical operations, as seen with smart TVs.
-        // That's what the Adapter pattern is about.
+		// --- NOT USING ADAPTERS ---
+		// Notice that we are hard-coding brand-specific methods like connectToWifi()
+		// and openWidget(). We'll need to call brand-specific methods for all other
+		// TV brands used in the project.
 
-        SonyAdapter sonyAdapter = new SonyAdapter(new Connector());
-        connectWifiAndPlay(sonyAdapter, "wifi.connected.notificator");
+		PhillipsSmartTv phillipsSmartTv = new PhillipsSmartTv();
+		phillipsSmartTv.on();
+		phillipsSmartTv.connectWifi(userSelectedWifi());
+		phillipsSmartTv.showWidget("some.phillips.widget");
+		phillipsSmartTv.startPlay(0);
 
-        PhillipsAdapter phillipsAdapter = new PhillipsAdapter(new PhillipsSmartTv());
-        connectWifiAndPlay(phillipsAdapter, "wifinotifier");
+		SamsungSmartTv samsungSmartTv = new SamsungSmartTv();
+		samsungSmartTv.turnOn();
+		samsungSmartTv.wifiConn(userSelectedWifi());
+		samsungSmartTv.showWidget("some.samsung.widget");
+		samsungSmartTv.startPlayback(0);
 
-        SamsungAdapter samsungAdapter = new SamsungAdapter(new SamsungSmartTv());
-        connectWifiAndPlay(samsungAdapter, "wifi.notificator");
-    }
+		Connector sonyConnector = new Connector();
+		SonySmartTv sonyInterface = sonyConnector.turnSonyTvOn();
+		sonyInterface.connectToWifi(userSelectedWifi());
+		sonyInterface.openWidget("some.sony.widget");
+		sonyInterface.play(0);
+	}
 
-    // With the Adapter pattern, we can create generic methods like this that will
-    // execute a sequence of operations independently of the smart TV brand being
-    // used.
-    private static void connectWifiAndPlay(TargetSmartTvInterface smartTVInterface, String wifiNotificationWidgetId) {
-        smartTVInterface.turnTvOn();
-        smartTVInterface.connectToWifi(userSelectedWifi());
-        smartTVInterface.showWidget(wifiNotificationWidgetId);
-        smartTVInterface.startPlay(0);
-    }
+	// With the Adapter pattern, we can create generic methods that will execute a
+	// sequence of operations independently of the smart TV brand being used.
+	private static void connectWifiAndPlay(TargetSmartTvInterface adapter, String widgetId) {
+		adapter.turnTvOn();
+		adapter.connectToWifi(userSelectedWifi());
+		adapter.showWidget(widgetId);
+		adapter.startPlay(0);
+	}
 
-    /**
-     * Imagine this method is used to retrieve the name of the Wi-Fi network to connect to.
-     */
-    private static String userSelectedWifi() {
-        return "anEssid";
-    }
+	/**
+	 * Imagine this method is used to retrieve the name of the Wi-Fi network to connect to.
+	 */
+	private static String userSelectedWifi() {
+		return "someEssid";
+	}
 
 }
