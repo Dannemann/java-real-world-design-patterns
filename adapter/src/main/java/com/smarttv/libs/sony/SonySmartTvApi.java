@@ -13,7 +13,7 @@ public class SonySmartTvApi {
 	// You need to use the Connector class first to turn the TV on and obtain an instance of this class.
 	// I made this to show you that you can adapt more than one class if needed.
 
-	public SonySmartTvApi() {
+	SonySmartTvApi() {
 	}
 
 	public void openMenu() {
