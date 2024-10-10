@@ -15,11 +15,6 @@ import my.application.adapters.TargetSmartTvInterface;
 public class Main {
 
 	public static void main(String[] args) {
-		withAdapters();
-		withoutAdapters();
-	}
-
-	private static void withAdapters() {
 		// With the Adapter pattern we abstract all the operations that are common to
 		// all smart TVs. Therefore, we do not need to hard-code any vendor specific
 		// implementations because they are all hidden by TargetSmartTvInterface.
@@ -45,7 +40,7 @@ public class Main {
 		adapter.startPlay(0);
 	}
 
-	private static void withoutAdapters() {
+	private static void withoutTheAdapters() {
 		// Notice that we are hard-coding brand-specific methods like connectToWifi()
 		// and openWidget(). We'll need to call brand-specific methods for all other
 		// TV brands used in the project.
@@ -70,8 +65,7 @@ public class Main {
 	}
 
 	/**
-	 * Imagine this method is used to retrieve the name of the Wi-Fi network to
-	 * connect to.
+	 * Imagine this method is used to retrieve the name of the Wi-Fi network to connect to.
 	 */
 	private static String userSelectedWifi() {
 		return "someEssid";
