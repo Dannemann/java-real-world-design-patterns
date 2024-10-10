@@ -7,7 +7,10 @@ import com.google.maps.routing.strategies.MotorcycleRouteCalculator;
 import com.google.maps.routing.strategies.RouteCalculator;
 
 /**
- * Available transport types in Google Maps.
+ * <p>Available transport types in Google Maps.</p>
+ * <p>Notice how we associate the route calculator instance with its corresponding
+ * enum. I did it this way to demonstrate a method for avoiding the use of
+ * <code>if</code> statements to select the algorithm.</p>
  */
 public enum TransportType {
 
@@ -18,7 +21,7 @@ public enum TransportType {
 
 	private final RouteCalculator routeCalculator;
 
-	private TransportType(RouteCalculator routeCalculator) {
+	TransportType(RouteCalculator routeCalculator) {
 		this.routeCalculator = routeCalculator;
 	}
 
