@@ -9,43 +9,37 @@ package com.smarttv.libs.samsung;
  */
 public class SamsungSmartTv {
 
+	// Samsung specific implementations.
+
 	public void turnOn() {
-		// Samsung specific implementation...
 		System.out.println("Samsung smart TV is on");
 	}
 
 	public void turnOff() {
-		// Samsung specific implementation...
 		System.out.println("Samsung smart TV is off");
 	}
 
 	public void openMenu() {
-		// Samsung specific implementation...
 		System.out.println("Samsung smart TV menu opened");
 	}
 
 	public void startPlayback(long startTime) {
-		// Samsung specific implementation...
 		System.out.println("Samsung smart TV playback started at " + startTime);
 	}
 
 	public void ffwPlayback(short speed) {
-		// Samsung specific implementation...
 		System.out.println("Samsung smart TV fast forwarding playback with speed " + speed);
 	}
 
 	public void rwnPlayback(short speed) {
-		// Samsung specific implementation...
 		System.out.println("Samsung smart TV rewind playback with speed " + speed);
 	}
 
 	public void wifiConn(String wifiName) {
-		// Samsung specific implementation...
 		System.out.println("Samsung smart TV connected to wireless network with name " + wifiName);
 	}
 
 	public void showWidget(String widgetID) {
-		// Samsung specific implementation...
 		System.out.println("Samsung smart TV showing widget with ID " + widgetID);
 	}
 

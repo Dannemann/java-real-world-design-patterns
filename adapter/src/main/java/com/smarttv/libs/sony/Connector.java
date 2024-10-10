@@ -14,14 +14,11 @@ public class Connector {
 	// I made this to show you that you can adapt more than one class if needed.
 
 	public SonySmartTv turnSonyTvOn() {
-		// Sony specific implementation...
 		System.out.println("Sony smart TV is on");
-
 		return new SonySmartTv();
 	}
 
 	public void turnSonyTvOff() {
-		// Sony specific implementation...
 		System.out.println("Sony smart TV is off");
 	}
 
