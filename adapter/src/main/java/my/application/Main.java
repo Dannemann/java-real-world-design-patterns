@@ -15,6 +15,11 @@ import my.application.adapters.TargetSmartTvInterface;
 public class Main {
 
 	public static void main(String[] args) {
+		withAdapters();
+		withoutAdapters();
+	}
+
+	private static void withAdapters() {
 		// With the Adapter pattern we abstract all the operations that are common to
 		// all smart TVs. Therefore, we do not need to hard-code any vendor specific
 		// implementations because they are all hidden by TargetSmartTvInterface.
@@ -29,9 +34,18 @@ public class Main {
 
 		SonyAdapter sonyAdapter = new SonyAdapter(new Connector());
 		connectWifiAndPlay(sonyAdapter, "some.sony.widget");
+	}
 
+	// With the Adapter pattern, we can create generic methods that will execute a
+	// sequence of operations independently of the smart TV brand being used.
+	private static void connectWifiAndPlay(TargetSmartTvInterface adapter, String widgetId) {
+		adapter.turnTvOn();
+		adapter.connectToWifi(userSelectedWifi());
+		adapter.showWidget(widgetId);
+		adapter.startPlay(0);
+	}
 
-		// --- NOT USING ADAPTERS ---
+	private static void withoutAdapters() {
 		// Notice that we are hard-coding brand-specific methods like connectToWifi()
 		// and openWidget(). We'll need to call brand-specific methods for all other
 		// TV brands used in the project.
@@ -55,17 +69,9 @@ public class Main {
 		sonyInterface.play(0);
 	}
 
-	// With the Adapter pattern, we can create generic methods that will execute a
-	// sequence of operations independently of the smart TV brand being used.
-	private static void connectWifiAndPlay(TargetSmartTvInterface adapter, String widgetId) {
-		adapter.turnTvOn();
-		adapter.connectToWifi(userSelectedWifi());
-		adapter.showWidget(widgetId);
-		adapter.startPlay(0);
-	}
-
 	/**
-	 * Imagine this method is used to retrieve the name of the Wi-Fi network to connect to.
+	 * Imagine this method is used to retrieve the name of the Wi-Fi network to
+	 * connect to.
 	 */
 	private static String userSelectedWifi() {
 		return "someEssid";
