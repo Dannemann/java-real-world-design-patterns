@@ -1,6 +1,6 @@
 package my.application.adapters;
 
-import com.smarttv.libs.phillips.PhillipsSmartTv;
+import com.smarttv.libs.phillips.PhillipsSmartTvApi;
 
 /**
  * <p>Phillips adapter.</p>
@@ -8,44 +8,40 @@ import com.smarttv.libs.phillips.PhillipsSmartTv;
  */
 public class PhillipsAdapter implements TargetSmartTvInterface {
 
-	private final PhillipsSmartTv phillipsSmartTv;
-
-	public PhillipsAdapter(PhillipsSmartTv phillipsSmartTv) {
-		this.phillipsSmartTv = phillipsSmartTv;
-	}
+	private final PhillipsSmartTvApi phillipsSmartTvApi = new PhillipsSmartTvApi();
 
 	// TargetSmartTvInterface implementation:
 
 	public void turnTvOn() {
-		phillipsSmartTv.on();
+		phillipsSmartTvApi.on();
 	}
 
 	public void turnTvOff() {
-		phillipsSmartTv.off();
+		phillipsSmartTvApi.off();
 	}
 
 	public void showMenu() {
-		phillipsSmartTv.menu();
+		phillipsSmartTvApi.menu();
 	}
 
 	public void startPlay(long startTime) {
-		phillipsSmartTv.startPlay(startTime);
+		phillipsSmartTvApi.startPlay(startTime);
 	}
 
 	public void ffw(short speed) {
-		phillipsSmartTv.ffw(speed);
+		phillipsSmartTvApi.ffw(speed);
 	}
 
 	public void rwn(short speed) {
-		phillipsSmartTv.rwn(speed);
+		phillipsSmartTvApi.rwn(speed);
 	}
 
 	public void connectToWifi(String wifiName) {
-		phillipsSmartTv.connectWifi(wifiName);
+		phillipsSmartTvApi.connectWifi(wifiName);
 	}
 
 	public void showWidget(String widgetID) {
-		phillipsSmartTv.showWidget(widgetID);
+		phillipsSmartTvApi.showWidget(widgetID);
 	}
 
 }

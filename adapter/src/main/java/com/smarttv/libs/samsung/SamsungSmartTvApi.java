@@ -7,7 +7,7 @@ package com.smarttv.libs.samsung;
  * would need then to add it as a dependency to your project.</p>
  * <p>This is the <b>adaptee</b> UML actor.</p>
  */
-public class SamsungSmartTv {
+public class SamsungSmartTvApi {
 
 	// Samsung specific implementations.
 

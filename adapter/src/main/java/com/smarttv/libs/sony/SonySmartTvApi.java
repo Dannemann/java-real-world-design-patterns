@@ -7,13 +7,13 @@ package com.smarttv.libs.sony;
  * would need then to add it as a dependency to your project.</p>
  * <p>This is the <b>adaptee</b> UML actor.</p>
  */
-public class SonySmartTv {
+public class SonySmartTvApi {
 
 	// Notice how Sony implementation is separated into two classes. 
 	// You need to use the Connector class first to turn the TV on and obtain an instance of this class.
 	// I made this to show you that you can adapt more than one class if needed.
 
-	SonySmartTv() {
+	public SonySmartTvApi() {
 	}
 
 	public void openMenu() {

@@ -7,7 +7,7 @@ package com.smarttv.libs.phillips;
  * would need then to add it as a dependency to your project.</p>
  * <p>This is the <b>adaptee</b> UML actor.</p>
  */
-public class PhillipsSmartTv {
+public class PhillipsSmartTvApi {
 
 	// Phillips specific implementations.
 

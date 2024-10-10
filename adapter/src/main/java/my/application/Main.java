@@ -1,9 +1,9 @@
 package my.application;
 
-import com.smarttv.libs.phillips.PhillipsSmartTv;
-import com.smarttv.libs.samsung.SamsungSmartTv;
+import com.smarttv.libs.phillips.PhillipsSmartTvApi;
+import com.smarttv.libs.samsung.SamsungSmartTvApi;
 import com.smarttv.libs.sony.Connector;
-import com.smarttv.libs.sony.SonySmartTv;
+import com.smarttv.libs.sony.SonySmartTvApi;
 import my.application.adapters.PhillipsAdapter;
 import my.application.adapters.SamsungAdapter;
 import my.application.adapters.SonyAdapter;
@@ -20,15 +20,9 @@ public class Main {
 		// implementations because they are all hidden by TargetSmartTvInterface.
 		// BUT REMEMBER: ONLY use the Adapter pattern if you have multiple different
 		// implementations of the same logical operations, as seen with smart TVs.
-
-		PhillipsAdapter phillipsAdapter = new PhillipsAdapter(new PhillipsSmartTv());
-		connectWifiAndPlay(phillipsAdapter, "some.phillips.widget");
-
-		SamsungAdapter samsungAdapter = new SamsungAdapter(new SamsungSmartTv());
-		connectWifiAndPlay(samsungAdapter, "some.samsung.widget");
-
-		SonyAdapter sonyAdapter = new SonyAdapter(new Connector());
-		connectWifiAndPlay(sonyAdapter, "some.sony.widget");
+		connectWifiAndPlay(new PhillipsAdapter(), "some.phillips.widget");
+		connectWifiAndPlay(new SamsungAdapter(), "some.samsung.widget");
+		connectWifiAndPlay(new SonyAdapter(), "some.sony.widget");
 	}
 
 	// With the Adapter pattern, we can create generic methods that will execute a
@@ -45,20 +39,20 @@ public class Main {
 		// and openWidget(). We'll need to call brand-specific methods for all other
 		// TV brands used in the project.
 
-		PhillipsSmartTv phillipsSmartTv = new PhillipsSmartTv();
-		phillipsSmartTv.on();
-		phillipsSmartTv.connectWifi(userSelectedWifi());
-		phillipsSmartTv.showWidget("some.phillips.widget");
-		phillipsSmartTv.startPlay(0);
+		PhillipsSmartTvApi phillipsSmartTvApi = new PhillipsSmartTvApi();
+		phillipsSmartTvApi.on();
+		phillipsSmartTvApi.connectWifi(userSelectedWifi());
+		phillipsSmartTvApi.showWidget("some.phillips.widget");
+		phillipsSmartTvApi.startPlay(0);
 
-		SamsungSmartTv samsungSmartTv = new SamsungSmartTv();
-		samsungSmartTv.turnOn();
-		samsungSmartTv.wifiConn(userSelectedWifi());
-		samsungSmartTv.showWidget("some.samsung.widget");
-		samsungSmartTv.startPlayback(0);
+		SamsungSmartTvApi samsungSmartTvApi = new SamsungSmartTvApi();
+		samsungSmartTvApi.turnOn();
+		samsungSmartTvApi.wifiConn(userSelectedWifi());
+		samsungSmartTvApi.showWidget("some.samsung.widget");
+		samsungSmartTvApi.startPlayback(0);
 
 		Connector sonyConnector = new Connector();
-		SonySmartTv sonyInterface = sonyConnector.turnSonyTvOn();
+		SonySmartTvApi sonyInterface = sonyConnector.turnSonyTvOn();
 		sonyInterface.connectToWifi(userSelectedWifi());
 		sonyInterface.openWidget("some.sony.widget");
 		sonyInterface.play(0);

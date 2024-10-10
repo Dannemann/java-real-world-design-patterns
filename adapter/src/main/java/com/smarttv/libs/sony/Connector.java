@@ -10,12 +10,12 @@ package com.smarttv.libs.sony;
 public class Connector {
 
 	// Notice how Sony implementation is separated into two classes.
-	// First, you need to use this class to turn the TV on and obtain the SonySmartTv object to call other commands.
+	// First, you need to use this class to turn the TV on and obtain the SonySmartTvApi object to call other commands.
 	// I made this to show you that you can adapt more than one class if needed.
 
-	public SonySmartTv turnSonyTvOn() {
+	public SonySmartTvApi turnSonyTvOn() {
 		System.out.println("Sony smart TV is on");
-		return new SonySmartTv();
+		return new SonySmartTvApi();
 	}
 
 	public void turnSonyTvOff() {

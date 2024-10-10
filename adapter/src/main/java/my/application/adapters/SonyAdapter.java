@@ -1,7 +1,7 @@
 package my.application.adapters;
 
 import com.smarttv.libs.sony.Connector;
-import com.smarttv.libs.sony.SonySmartTv;
+import com.smarttv.libs.sony.SonySmartTvApi;
 
 /**
  * <p>Sony adapter.</p>
@@ -9,18 +9,14 @@ import com.smarttv.libs.sony.SonySmartTv;
  */
 public class SonyAdapter implements TargetSmartTvInterface {
 
-	private final Connector sonyConnector;
+	private final Connector sonyConnector = new Connector();
 
-	private SonySmartTv sonySmartTv;
-
-	public SonyAdapter(Connector sonyConnector) {
-		this.sonyConnector = sonyConnector;
-	}
+	private SonySmartTvApi sonySmartTvApi;
 
 	// TargetSmartTvInterface implementation:
 
 	public void turnTvOn() {
-		sonySmartTv = sonyConnector.turnSonyTvOn();
+		sonySmartTvApi = sonyConnector.turnSonyTvOn(); // Populates sonySmartTvApi.
 	}
 
 	public void turnTvOff() {
@@ -28,27 +24,27 @@ public class SonyAdapter implements TargetSmartTvInterface {
 	}
 
 	public void showMenu() {
-		sonySmartTv.openMenu();
+		sonySmartTvApi.openMenu();
 	}
 
 	public void startPlay(long startTime) {
-		sonySmartTv.play(startTime);
+		sonySmartTvApi.play(startTime);
 	}
 
 	public void ffw(short speed) {
-		sonySmartTv.fastForwardPlayback(speed);
+		sonySmartTvApi.fastForwardPlayback(speed);
 	}
 
 	public void rwn(short speed) {
-		sonySmartTv.rewindPlayback(speed);
+		sonySmartTvApi.rewindPlayback(speed);
 	}
 
 	public void connectToWifi(String wifiName) {
-		sonySmartTv.connectToWifi(wifiName);
+		sonySmartTvApi.connectToWifi(wifiName);
 	}
 
 	public void showWidget(String widgetID) {
-		sonySmartTv.openWidget(widgetID);
+		sonySmartTvApi.openWidget(widgetID);
 	}
 
 }
