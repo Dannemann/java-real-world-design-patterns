@@ -34,10 +34,9 @@ public class Main {
 		// context and shared data across algorithm (strategy) changes. There was no
 		// need to provide the GPS coordinates again, only the transport type.
 		// The arguments are preserved within the context.
-
-		// Without the context, you simply use the polymorphism offered by the
-		// RouteCalculator interface as a generic type, which is a common behavior in
-		// OOP.
+		// The context is the reason for this pattern to exist. Without it, you simply
+		// use the polymorphism offered by the RouteCalculator interface as a generic
+		// type, which is a common behavior in OOP.
 	}
 
 }
