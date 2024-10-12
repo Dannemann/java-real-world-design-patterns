@@ -1,4 +1,4 @@
-package com.google.maps.routing;
+package com.google.maps.routing.strategies;
 
 import com.google.maps.routing.models.TransportType;
 

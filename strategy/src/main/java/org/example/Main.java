@@ -1,12 +1,12 @@
 package org.example;
 
-import com.google.maps.routing.RouteCalculatorContext;
 import com.google.maps.routing.models.TransportType;
+import com.google.maps.routing.strategies.RouteCalculatorContext;
 
 /**
  * <p>This is the <b>client</b> UML actor.</p>
  * <p>Notice how we decoupled the whole Strategy inside package
- * <code>com.google.maps.*</code>. It could be easily packed in a JAR.</p>
+ * <code>com.google.maps.routing</code>. It could be easily packed in a JAR.</p>
  */
 public class Main {
 
