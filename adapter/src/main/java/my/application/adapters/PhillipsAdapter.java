@@ -8,7 +8,11 @@ import com.smarttv.libs.phillips.PhillipsSmartTvApi;
  */
 public class PhillipsAdapter implements TargetSmartTvInterface {
 
-	private final PhillipsSmartTvApi phillipsSmartTvApi = new PhillipsSmartTvApi();
+	private final PhillipsSmartTvApi phillipsSmartTvApi;
+
+	public PhillipsAdapter(PhillipsSmartTvApi phillipsSmartTvApi) {
+		this.phillipsSmartTvApi = phillipsSmartTvApi;
+	}
 
 	// TargetSmartTvInterface implementation:
 

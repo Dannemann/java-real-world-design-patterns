@@ -20,9 +20,15 @@ public class Main {
 		// implementations because they are all hidden by TargetSmartTvInterface.
 		// BUT REMEMBER: ONLY use the Adapter pattern if you have multiple different
 		// implementations of the same logical operations, as seen with smart TVs.
-		connectWifiAndPlay(new PhillipsAdapter(), "some.phillips.widget");
-		connectWifiAndPlay(new SamsungAdapter(), "some.samsung.widget");
-		connectWifiAndPlay(new SonyAdapter(), "some.sony.widget");
+
+		PhillipsAdapter phillipsAdapter = new PhillipsAdapter(new PhillipsSmartTvApi());
+		connectWifiAndPlay(phillipsAdapter, "some.phillips.widget");
+
+		SamsungAdapter samsungAdapter = new SamsungAdapter(new SamsungSmartTvApi());
+		connectWifiAndPlay(samsungAdapter, "some.samsung.widget");
+
+		SonyAdapter sonyAdapter = new SonyAdapter(new Connector());
+		connectWifiAndPlay(sonyAdapter, "some.sony.widget");
 	}
 
 	// With the Adapter pattern, we can create generic methods that will execute a

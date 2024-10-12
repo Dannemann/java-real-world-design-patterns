@@ -8,7 +8,11 @@ import com.smarttv.libs.samsung.SamsungSmartTvApi;
  */
 public class SamsungAdapter implements TargetSmartTvInterface {
 
-	private final SamsungSmartTvApi samsungSmartTvApi = new SamsungSmartTvApi();
+	private final SamsungSmartTvApi samsungSmartTvApi;
+
+	public SamsungAdapter(SamsungSmartTvApi samsungSmartTvApi) {
+		this.samsungSmartTvApi = samsungSmartTvApi;
+	}
 
 	// TargetSmartTvInterface implementation:
 

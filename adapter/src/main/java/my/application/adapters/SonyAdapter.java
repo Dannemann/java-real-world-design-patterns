@@ -9,9 +9,13 @@ import com.smarttv.libs.sony.SonySmartTvApi;
  */
 public class SonyAdapter implements TargetSmartTvInterface {
 
-	private final Connector sonyConnector = new Connector();
+	private final Connector sonyConnector;
 
 	private SonySmartTvApi sonySmartTvApi;
+
+	public SonyAdapter(Connector sonyConnector) {
+		this.sonyConnector = sonyConnector;
+	}
 
 	// TargetSmartTvInterface implementation:
 
