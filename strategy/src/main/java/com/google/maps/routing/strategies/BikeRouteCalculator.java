@@ -6,8 +6,9 @@ package com.google.maps.routing.strategies;
  */
 public class BikeRouteCalculator implements RouteCalculator {
 
-	public Object calculate(Double from, Double to) {
-		return new Object(); // Let's treat this object as the calculated bike route.
-	}
+    public Object calculate(Double from, Double to) {
+        System.out.println("Calculating bike route...");
+        return new Object(); // Let's treat this object as the calculated bike route.
+    }
 
 }

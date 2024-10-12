@@ -12,7 +12,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// This data will usually come from the UI.
-		TransportType transportType = TransportType.FOOT;
+		TransportType transportType = TransportType.BIKE;
 		Double gpsFrom = 43348589345435d;
 		Double gpsTo = 02349209237478d;
 

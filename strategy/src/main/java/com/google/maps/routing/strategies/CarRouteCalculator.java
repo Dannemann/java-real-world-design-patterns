@@ -6,8 +6,9 @@ package com.google.maps.routing.strategies;
  */
 public class CarRouteCalculator implements RouteCalculator {
 
-	public Object calculate(Double from, Double to) {
-		return new Object(); // Let's treat this object as the calculated car route.
-	}
+    public Object calculate(Double from, Double to) {
+        System.out.println("Calculating car route...");
+        return new Object(); // Let's treat this object as the calculated car route.
+    }
 
 }
