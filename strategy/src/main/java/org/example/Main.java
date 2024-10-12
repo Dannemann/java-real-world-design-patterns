@@ -35,8 +35,8 @@ public class Main {
 		// need to provide the GPS coordinates again, only the transport type.
 		// The arguments are preserved within the context.
 		// The context is the reason for this pattern to exist. Without it, you simply
-		// use the polymorphism offered by the RouteCalculator interface as a generic
-		// type, which is a common behavior in OOP.
+		// use the polymorphic behavior offered by RouteCalculator interface as a
+		// generic type, which is a common daily-basis OOP feature.
 	}
 
 }
