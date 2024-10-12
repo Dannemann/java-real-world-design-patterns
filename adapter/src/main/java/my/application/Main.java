@@ -21,14 +21,20 @@ public class Main {
 		// BUT REMEMBER: ONLY use the Adapter pattern if you have multiple different
 		// implementations of the same logical operations, as seen with smart TVs.
 
-		PhillipsAdapter phillipsAdapter = new PhillipsAdapter(new PhillipsSmartTvApi());
+		PhillipsSmartTvApi phillipsSmartTvApi = new PhillipsSmartTvApi();
+		PhillipsAdapter phillipsAdapter = new PhillipsAdapter(phillipsSmartTvApi);
 		connectWifiAndPlay(phillipsAdapter, "some.phillips.widget");
 
-		SamsungAdapter samsungAdapter = new SamsungAdapter(new SamsungSmartTvApi());
+		SamsungSmartTvApi samsungSmartTvApi = new SamsungSmartTvApi();
+		SamsungAdapter samsungAdapter = new SamsungAdapter(samsungSmartTvApi);
 		connectWifiAndPlay(samsungAdapter, "some.samsung.widget");
 
-		SonyAdapter sonyAdapter = new SonyAdapter(new Connector());
+		Connector connector = new Connector();
+		SonyAdapter sonyAdapter = new SonyAdapter(connector);
 		connectWifiAndPlay(sonyAdapter, "some.sony.widget");
+
+		// Note: I personally prefer to instantiate the API objects outside the adapters
+		// due to the Single Responsibility Principle.
 	}
 
 	// With the Adapter pattern, we can create generic methods that will execute a
@@ -64,9 +70,6 @@ public class Main {
 		sonyInterface.play(0);
 	}
 
-	/**
-	 * Imagine this method is used to retrieve the name of the Wi-Fi network to connect to.
-	 */
 	private static String userSelectedWifi() {
 		return "someEssid";
 	}
