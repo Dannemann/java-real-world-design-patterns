@@ -33,8 +33,8 @@ public class Main {
 		SonyAdapter sonyAdapter = new SonyAdapter(connector);
 		connectWifiAndPlay(sonyAdapter, "some.sony.widget");
 
-		// Note: I personally prefer to instantiate the API objects outside the adapters
-		// due to the Single Responsibility Principle.
+		// Note: Instantiate the API objects outside the adapters due to the Single
+		// Responsibility Principle.
 	}
 
 	// With the Adapter pattern, we can create generic methods that will execute a
