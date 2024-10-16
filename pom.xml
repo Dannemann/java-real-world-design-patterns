@@ -32,4 +32,8 @@
 		<module>singleton</module>
 		<module>strategy</module>
 	</modules>
+
+	<properties>
+		<maven.compiler.release>16</maven.compiler.release>
+	</properties>
 </project>
