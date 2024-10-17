@@ -2,10 +2,6 @@
 
 The Observer design pattern is useful when independent components rely on the same data object(s) and need to be notified of any changes in the data state.
 
-Many examples we see on the Internet are not very practical for realistically describing this pattern because they fail to highlight one of its most important aspects: the object's time to live; involved objects must be in memory. Additionally, these examples often focus on a general publish-subscribe mechanism that, in real life, you would most likely handle with infrastructure technologies or a simpler implementation. You may notice that the pattern doesn't fit perfectly in many examples, like something is missing.
-
-It is generally not useful in environments where objects are rapidly created and destroyed, such as back-end web development where you primarily deal with stateless requests and responses. A more appropriate use case example would be libraries/frameworks, or graphical user interfaces, where multiple objects persist in memory for a reasonable amount of time, and you are constantly notifying them of changes.
-
 This example simulates a front-end project for an audio editing application. It has a very complex main screen, full of sliders, knobs, input and output components [like this](https://i.pcmag.com/imagery/roundups/00XVABPc9FVmXg9i9kh0IEw-11.fit_lim.size_768x.jpg). Imagine we have to update all those components each time a change in the audio track occurs. But not only the track; changes in the project settings can also trigger updates on them. We could use the Observer design pattern for that, as different components (UI widgets) depend on the same data objects (audio track and project settings) and must be notified of any changes in the data.
 
 ### About the code
