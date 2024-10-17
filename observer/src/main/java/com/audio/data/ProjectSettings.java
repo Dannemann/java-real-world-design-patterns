@@ -3,15 +3,15 @@ package com.audio.data;
 import com.audio.observer.Observer;
 import com.audio.observer.Subject;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class ProjectSettings implements Subject {
 
-    private Map<String, Object> projectSettings; // Storage for all project settings.
+    private Map<String, Object> projectSettings; // Storage for all project settings. Shared across the app.
 
-    private List<Observer> observers = new ArrayList<>();
+    private Set<Observer> observers = new HashSet<>();
 
     // Subject implementation:
 
@@ -21,7 +21,7 @@ public class ProjectSettings implements Subject {
     }
 
     @Override
-    public List<Observer> getObservers() {
+    public Set<Observer> getObservers() {
         return observers;
     }
 
@@ -34,7 +34,7 @@ public class ProjectSettings implements Subject {
 
     public void loadFromPath(String path) {
         System.out.println("ProjectSettings.loadFromPath: " + path);
-        Map<String, Object> loadedSettings = Map.of("key", "loadedValue"); // Imagine this are the loaded settings.
+        Map<String, Object> loadedSettings = Map.of("key", "loadedValue"); // Imagine these are the loaded settings.
         setProjectSettings(loadedSettings);
     }
 

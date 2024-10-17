@@ -6,20 +6,18 @@ import com.audio.ui.widgets.Knob;
 import com.audio.ui.widgets.Panel;
 import com.audio.ui.widgets.Slider;
 
-public class MainUi {
+public class MainGui {
 
-    // Main screen data objects.
+    // Main data objects shared across the app.
     private ProjectSettings projectSettings;
     private Audio audio;
 
-    // Next step is for the software to load its visual assets and widgets.
     // We load many widgets that compose a complex audio editing software screen.
     private Knob knob1 = new Knob();
     private Knob knob2 = new Knob();
     private Slider slider1 = new Slider();
     private Slider slider2 = new Slider();
     private Panel panel1 = new Panel();
-    private Panel panel2 = new Panel();
 
     public void loadMainUi() {
         // Let's imagine the user just started the audio editing software and a new project was created with an empty audio track.
@@ -52,14 +50,14 @@ public class MainUi {
 
     private void setupProjectSettings(ProjectSettings newProjectSettings) {
         projectSettings = newProjectSettings;
-        projectSettings.attachObservers(panel1, panel2, knob1, knob2, slider1, slider2);
+        projectSettings.attachObservers(panel1, knob1, knob2, slider1, slider2);
     }
 
     private void setupNewAudioTrack(Audio newAudio) {
         audio = newAudio;
         audio.attachObservers(knob1, knob2, slider1, slider2);
 
-        // Widgets can also change the audio state. In that case, we need to associate the audio track with them.
+        // Some widgets can change the audio state.
         knob1.setAudio(audio);
         knob2.setAudio(audio);
         slider1.setAudio(audio);

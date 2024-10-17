@@ -1,12 +1,12 @@
 package com.audio;
 
-import com.audio.ui.MainUi;
+import com.audio.ui.MainGui;
 
 public class Main {
 
     public static void main(String[] args) {
-        MainUi mainUi = new MainUi();
-        mainUi.loadMainUi();
+        MainGui mainGui = new MainGui();
+        mainGui.loadMainUi();
     }
 
 }

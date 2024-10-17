@@ -1,19 +1,20 @@
 package com.audio.observer;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Set;
 
 /**
- * A shared data object that must notify its dependents whenever its state changes.
+ * <p>A shared data object that must notify its dependents whenever its state changes.</p>
+ * <p>This is the <b>Subject</b> UML actor.</p>
  */
 public interface Subject {
 
     /**
-     * Allows observers to retrieve the current state.
+     * Allows observers to access the current state.
      */
     Object getState();
 
-    List<Observer> getObservers();
+    Set<Observer> getObservers();
 
     default void attachObserver(Observer observer) {
         getObservers().add(observer);
