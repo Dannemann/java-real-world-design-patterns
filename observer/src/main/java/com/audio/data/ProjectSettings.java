@@ -1,7 +1,6 @@
 package com.audio.data;
 
-import com.audio.observer.Observer;
-import com.audio.observer.Subject;
+import com.audio.ui.widgets.Observer;
 
 import java.util.HashSet;
 import java.util.Map;

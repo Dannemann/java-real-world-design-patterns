@@ -6,6 +6,4 @@ This example simulates a front-end project for an audio editing application. It 
 
 ### About the code
 
-Package `com.audio.ui.widgets` contains all the complex UI components tailored specifically for an audio editing application. I added just a few, but usually an app like this would have dozens of them. Note that in a real-life scenario, this package would also contain UI components that are not Observers.
-
-Package `com.audio.data` contains the application’s core shared data objects. `Audio` represents the current track being edited, with its state affected by multiple widgets. `ProjectSettings` manages the project properties, some of which may trigger visual updates. Package `com.audio.observer` provides a generic Observer pattern interface, designed for use with subjects and observers across various subdomains. Lastly, `MainGui` class contains the logic for building the main screen front-end.
+Package `com.audio.ui.widgets` contains all the complex UI components tailored specifically for an audio editing application. I added just a few, but usually an app like this would have dozens of them. Note that in a real-life scenario, this package would also contain UI components that are not Observers. Package `com.audio.data` contains the application’s core shared data objects. `Audio` represents the current track being edited, with its state affected by multiple widgets. `ProjectSettings` manages the project properties, some of which may trigger visual updates. Lastly, `MainGui` class contains the logic for building the main screen front-end.

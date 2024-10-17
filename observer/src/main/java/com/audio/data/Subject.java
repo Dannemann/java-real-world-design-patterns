@@ -1,4 +1,6 @@
-package com.audio.observer;
+package com.audio.data;
+
+import com.audio.ui.widgets.Observer;
 
 import java.util.Arrays;
 import java.util.Set;

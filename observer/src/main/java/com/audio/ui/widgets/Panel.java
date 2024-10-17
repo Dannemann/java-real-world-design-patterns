@@ -1,7 +1,6 @@
 package com.audio.ui.widgets;
 
-import com.audio.observer.Observer;
-import com.audio.observer.Subject;
+import com.audio.data.Subject;
 
 import java.util.Map;
 
