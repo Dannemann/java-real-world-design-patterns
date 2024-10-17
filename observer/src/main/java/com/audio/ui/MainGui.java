@@ -23,12 +23,12 @@ public class MainGui {
         // Let's imagine the user just started the audio editing software and a new project was created with an empty audio track.
 
         // Loading default settings.
-        setupProjectSettings(new ProjectSettings());
+        setupProjectSettings();
         projectSettings.loadDefaults();
         System.out.println(" ### Default settings loaded.\n");
 
         // Empty audio track.
-        setupNewAudioTrack(new Audio());
+        setupNewAudioTrack();
         audio.createEmptyTrack();
         System.out.println(" ### Empty track created.\n");
 
@@ -48,13 +48,13 @@ public class MainGui {
         System.out.println(" ### Slider updated.\n");
     }
 
-    private void setupProjectSettings(ProjectSettings newProjectSettings) {
-        projectSettings = newProjectSettings;
+    private void setupProjectSettings() {
+        projectSettings = new ProjectSettings();
         projectSettings.attachObservers(panel1, knob1, knob2, slider1, slider2);
     }
 
-    private void setupNewAudioTrack(Audio newAudio) {
-        audio = newAudio;
+    private void setupNewAudioTrack() {
+        audio = new Audio();
         audio.attachObservers(knob1, knob2, slider1, slider2);
 
         // Some widgets can change the audio state.
