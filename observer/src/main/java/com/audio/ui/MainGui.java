@@ -23,7 +23,7 @@ public class MainGui {
         // Let's imagine the user just started the audio editing software and a new project was created with an empty audio track.
 
         // Loading default settings.
-        setupProjectSettings();
+        setupNewProjectSettings();
         projectSettings.loadDefaults();
         System.out.println(" ### Default settings loaded.\n");
 
@@ -41,14 +41,14 @@ public class MainGui {
         audio.loadAudioTrack("/path/to/file");
         System.out.println(" ### Imported track loaded.\n");
 
-        // With the project opened and the widgets updated, let's imagine that the user moved a slider adding an effect to the song.
-        // This effect changes many parts of the song making all sliders and knobs to move.
+        // With the project open and widgets updated, the user can move a slider to add an effect to the song.
+        // This effect changes many parts of the audio, causing all sliders and knobs to move
 
         slider1.slide(-10);
         System.out.println(" ### Slider updated.\n");
     }
 
-    private void setupProjectSettings() {
+    private void setupNewProjectSettings() {
         projectSettings = new ProjectSettings();
         projectSettings.attachObservers(panel1, knob1, knob2, slider1, slider2);
     }
