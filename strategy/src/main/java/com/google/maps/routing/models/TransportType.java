@@ -1,10 +1,10 @@
 package com.google.maps.routing.models;
 
-import com.google.maps.routing.strategies.BikeRouteCalculator;
-import com.google.maps.routing.strategies.CarRouteCalculator;
-import com.google.maps.routing.strategies.FootRouteCalculator;
-import com.google.maps.routing.strategies.MotorcycleRouteCalculator;
-import com.google.maps.routing.strategies.RouteCalculator;
+import com.google.maps.routing.strategy.RouteCalculator;
+import com.google.maps.routing.strategy.algorithms.BikeRouteCalculator;
+import com.google.maps.routing.strategy.algorithms.CarRouteCalculator;
+import com.google.maps.routing.strategy.algorithms.FootRouteCalculator;
+import com.google.maps.routing.strategy.algorithms.MotorcycleRouteCalculator;
 
 /**
  * <p>Available transport types in Google Maps.</p>
@@ -14,19 +14,19 @@ import com.google.maps.routing.strategies.RouteCalculator;
  */
 public enum TransportType {
 
-	FOOT(new FootRouteCalculator()),
-	BIKE(new BikeRouteCalculator()),
-	MOTORCYCLE(new MotorcycleRouteCalculator()),
-	CAR(new CarRouteCalculator());
+    BIKE(new BikeRouteCalculator()),
+    CAR(new CarRouteCalculator()),
+    FOOT(new FootRouteCalculator()),
+    MOTORCYCLE(new MotorcycleRouteCalculator());
 
-	private final RouteCalculator routeCalculator;
+    private final RouteCalculator routeCalculator;
 
-	TransportType(RouteCalculator routeCalculator) {
-		this.routeCalculator = routeCalculator;
-	}
+    TransportType(RouteCalculator routeCalculator) {
+        this.routeCalculator = routeCalculator;
+    }
 
-	public RouteCalculator getRouteCalculator() {
-		return routeCalculator;
-	}
+    public RouteCalculator getRouteCalculator() {
+        return routeCalculator;
+    }
 
 }
