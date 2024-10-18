@@ -10,4 +10,4 @@ Package `com.google.maps.routing` contains the strategies that would be from Goo
 
 ### Related patterns
 
-If you're familiar with the Adapter design pattern, you'll notice some similarities. Both patterns address different implementations of the same logical operations. The key difference is that the Adapter pattern works with existing or third-party code, which you may not always have access to. It adapts different method names across various classes to a unified interface. In contrast, the Strategy pattern inherently uses the same method names across different classes, as they follow the Strategy interface.
+If you're familiar with the Adapter design pattern, you'll notice something similar. Both patterns address different implementations of the same logical operations. The key difference is that the Adapter pattern works with existing or third-party code, which you may not always have access to. It adapts different method names across various classes to a unified interface. In contrast, the Strategy pattern inherently uses the same method names across different classes, as they follow the Strategy interface.
