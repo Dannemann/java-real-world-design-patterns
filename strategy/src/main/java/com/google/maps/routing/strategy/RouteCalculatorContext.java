@@ -40,7 +40,7 @@ public class RouteCalculatorContext {
      * <p>This is the actual Strategy pattern execution.</p>
      */
     public Object calculate() {
-        // If you're not using enum or Map associations, you can include an if statement here to select the appropriate algorithm.
+        // If you're not using enum, array, or Map associations, you can include an if statement here to select the appropriate algorithm.
         return transportType.getRouteCalculator().calculate(this);
     }
 
