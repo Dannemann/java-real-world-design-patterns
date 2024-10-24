@@ -1,10 +1,9 @@
-package com.google.maps.routing.models;
+package com.google.maps.model;
 
-import com.google.maps.routing.strategy.RouteCalculator;
-import com.google.maps.routing.strategy.algorithms.BikeRouteCalculator;
-import com.google.maps.routing.strategy.algorithms.CarRouteCalculator;
-import com.google.maps.routing.strategy.algorithms.FootRouteCalculator;
-import com.google.maps.routing.strategy.algorithms.MotorcycleRouteCalculator;
+import com.google.maps.routing.BikeRouteCalculator;
+import com.google.maps.routing.CarRouteCalculator;
+import com.google.maps.routing.MotorcycleRouteCalculator;
+import com.google.maps.routing.RouteCalculator;
 
 /**
  * <p>Available transport types in Google Maps.</p>
@@ -16,7 +15,6 @@ public enum TransportType {
 
     BIKE(new BikeRouteCalculator()),
     CAR(new CarRouteCalculator()),
-    FOOT(new FootRouteCalculator()),
     MOTORCYCLE(new MotorcycleRouteCalculator());
 
     private final RouteCalculator routeCalculator;
