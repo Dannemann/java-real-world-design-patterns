@@ -23,9 +23,10 @@ public class MapEngine {
      * better suits your design preferences.</p>
      */
     public Object calculateRoute() {
-        // If you're not using enum, array, or Map associations, you can
-        // include an if statement here to select the appropriate algorithm.
-        return transportType.getRouteCalculator().calculate(this);
+        // ...complex code to transform parameters, call other methods, etc...
+        Object route = transportType.getRouteCalculator().calculate(this);
+        // ...validates and transform route to a UI friendly object...
+        return route;
     }
 
     // ...other methods and members of the Maps engine...

@@ -1,6 +1,10 @@
 package com.google.maps;
 
 import com.google.maps.model.TransportType;
+import com.google.maps.routing.BikeRouteCalculator;
+import com.google.maps.routing.CarRouteCalculator;
+import com.google.maps.routing.MotorcycleRouteCalculator;
+import com.google.maps.routing.RouteCalculator;
 
 /**
  * Client code.
@@ -24,6 +28,21 @@ public class MainUi {
 
         // ...we just calculate it again but this time with a different algorithm.
         route = ENGINE.calculateRoute();
+    }
+
+    /**
+     * If you're not using enum, array, or Map associations, you could use a method
+     * like this to select the appropriate algorithm and pass it to
+     * <code>MapEngine</code>. <code>MapEngine</code> would then have a reference
+     * to <code>RouteCalculator</code> instead of <code>TransportType</code>.
+     */
+    private static RouteCalculator routeCalculator(TransportType transporttype) {
+        // Route calculators could be Singletons if it better suits your design.
+        return switch (transporttype) {
+            case BIKE -> new BikeRouteCalculator();
+            case CAR -> new CarRouteCalculator();
+            case MOTORCYCLE -> new MotorcycleRouteCalculator();
+        };
     }
 
 }
