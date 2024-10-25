@@ -10,7 +10,7 @@ import example1.org.emulator.engine.filters.SharpenFilter;
 public class Main {
 
     /**
-     * The component to be decorated.
+     * Main component to be decorated.
      */
     private static VideoGameEmulator videoGameEmulator;
 
