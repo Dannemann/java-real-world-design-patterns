@@ -27,7 +27,7 @@ public abstract class FrameFilter extends VideoGameEmulator {
         return emulator.changeResolution();
     }
 
-    // Other useful public non-abstract methods can also be enhanced in the same way.
+    // Other useful public non-abstract methods can also be decorated in the same way.
 
     @Override
     public String resolutionGraph() {
