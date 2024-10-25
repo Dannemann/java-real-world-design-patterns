@@ -37,7 +37,7 @@ public class MainUi {
      * to <code>RouteCalculator</code> instead of <code>TransportType</code>.
      */
     private static RouteCalculator routeCalculator(TransportType transporttype) {
-        // Route calculators could be Singletons if that better suits your design (as they are at TransportType).
+        // Route calculators could be Singletons if that better suits your design (as they are in TransportType).
         return switch (transporttype) {
             case BIKE -> new BikeRouteCalculator();
             case CAR -> new CarRouteCalculator();
