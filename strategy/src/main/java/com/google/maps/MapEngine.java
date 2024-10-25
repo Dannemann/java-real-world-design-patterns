@@ -4,7 +4,7 @@ import com.google.maps.model.TransportType;
 
 /**
  * <p>Google Maps' map engine.</p>
- * <p>This is the <b>context</b> UML actor.</p>
+ * <p>This is the <b>Context</b> UML actor.</p>
  */
 public class MapEngine {
 
@@ -18,7 +18,7 @@ public class MapEngine {
     /**
      * <p>Triggers route calculation using the selected strategy.</p>
      * <p>This method passes the current instance of this class as an argument,
-     * allowing Strategies to access all public members. Note that this approach is
+     * allowing strategies to access all public members. Note that this approach is
      * optional. If you need Strategies decoupled from <code>MapEngine</code>, you
      * could pass each parameter individually.</p>
      */

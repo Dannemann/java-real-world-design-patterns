@@ -4,7 +4,7 @@ import com.google.maps.MapEngine;
 
 /**
  * <p>Calculates the best route by motorcycle.</p>
- * <p>This is the <b>concrete strategy</b> UML actor.</p>
+ * <p>This is the <b>ConcreteStrategy</b> UML actor.</p>
  */
 public class MotorcycleRouteCalculator implements RouteCalculator {
 
