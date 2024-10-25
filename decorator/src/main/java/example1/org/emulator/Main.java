@@ -36,7 +36,7 @@ public class Main {
         decoratedEmulator = new BilinearFiltering(new FxaaAntiAliasing(new SharpenFilter(videoGameEmulator)));
         System.out.println(decoratedEmulator.renderFrame());
 
-        // But Nintendo64 needs to keep a resolution graph before start playing.
+        // But Nintendo64 also needs to enhance the resolution graph for some filters.
         System.out.println(decoratedEmulator.resolutionGraph());
     }
 
