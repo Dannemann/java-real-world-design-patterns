@@ -24,7 +24,7 @@ public class MainPlayer {
         DECODER.filters.add(new VhsFilter());
         System.out.println(DECODER.renderFrame());
 
-        // The user does not want filters anymore.
+        // The user no longer wants filters.
         DECODER.filters.clear();
         System.out.println(DECODER.renderFrame());
     }
