@@ -35,8 +35,8 @@ public class MainUi {
      * like this to select the appropriate algorithm and pass it to
      * <code>MapEngine</code>. <code>MapEngine</code> would then have a reference to
      * <code>RouteCalculator</code> instead of <code>TransportType</code>.</p>
-     * <p>The reason this method is outside <code>MapEngine</code> is to keep concrete
-     * strategies and the context decoupled.</p>
+     * <p>The reason this method is outside of <code>MapEngine</code> is to keep
+     * concrete strategies and the context decoupled.</p>
      */
     private static RouteCalculator routeCalculator(TransportType transporttype) {
         // Route calculators could be Singletons if that better suits your design (as they are in TransportType).
