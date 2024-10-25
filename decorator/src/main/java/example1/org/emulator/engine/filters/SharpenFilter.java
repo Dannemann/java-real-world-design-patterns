@@ -19,4 +19,15 @@ public class SharpenFilter extends FrameFilter {
         return renderedFrame + " with SharpenFilter";
     }
 
+    /**
+     * <p>Imagine that sharpen algorithms require special handling when the resolution changes.</p>
+     * <p>Note that this is a typical method in <code>VideoGameEmulator</code>.</p>
+     */
+    @Override
+    public String resolutionGraph() {
+        String resolutionGraph = super.resolutionGraph();
+        // ...complex code to enhance the resolution graph...
+        return resolutionGraph + " with SharpenFilter";
+    }
+
 }

@@ -15,8 +15,8 @@ public class Nintendo64Emulator extends VideoGameEmulator {
     }
 
     @Override
-    public void changeResolution() {
-        System.out.println("N64.resolutionChangedTo " + resolutionX + "x" + resolutionY);
+    public String changeResolution() {
+        return "N64.resolutionChangedTo " + resolutionX + "x" + resolutionY;
     }
 
     // ...implementation...

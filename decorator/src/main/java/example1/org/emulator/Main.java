@@ -9,17 +9,35 @@ import example1.org.emulator.engine.filters.SharpenFilter;
 
 public class Main {
 
+    /**
+     * The component to be decorated.
+     */
+    private static VideoGameEmulator videoGameEmulator;
+
     public static void main(String[] args) {
-        VideoGameEmulator emulator;
-        String frame;
+        VideoGameEmulator decoratedEmulator;
 
-        emulator = new BilinearFiltering(new PlayStationEmulator());
-        frame = emulator.renderFrame();
-        System.out.println(frame);
+        // The user starts the PlayStation emulator with only bilinear filtering...
+        videoGameEmulator = new PlayStationEmulator();
+        decoratedEmulator = new BilinearFiltering(videoGameEmulator);
+        System.out.println(decoratedEmulator.renderFrame());
 
-        emulator = new BilinearFiltering(new SharpenFilter(new FxaaAntiAliasing(new Nintendo64Emulator())));
-        frame = emulator.renderFrame();
-        System.out.println(frame);
+        // The user adds other filters to enhance the image quality...
+        decoratedEmulator = new BilinearFiltering(new FxaaAntiAliasing(new SharpenFilter(videoGameEmulator)));
+        System.out.println(decoratedEmulator.renderFrame());
+
+        // The user changes the screen resolution.
+        videoGameEmulator.resolutionX = 800;
+        videoGameEmulator.resolutionY = 600;
+        System.out.println(decoratedEmulator.changeResolution());
+
+        // The user now decides to play Nintendo64 with the same filters.
+        videoGameEmulator = new Nintendo64Emulator();
+        decoratedEmulator = new BilinearFiltering(new FxaaAntiAliasing(new SharpenFilter(videoGameEmulator)));
+        System.out.println(decoratedEmulator.renderFrame());
+
+        // But Nintendo64 needs to keep a resolution graph before start playing.
+        System.out.println(decoratedEmulator.resolutionGraph());
     }
 
 }

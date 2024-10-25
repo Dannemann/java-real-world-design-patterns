@@ -25,10 +25,10 @@ public class PlayStationEmulator extends VideoGameEmulator {
     }
 
     @Override
-    public void changeResolution() {
-        System.out.println("PSX.resolutionChangedTo " + resolutionX + "x" + resolutionY);
+    public String changeResolution() {
+        return "PSX.resolutionChangedTo " + resolutionX + "x" + resolutionY;
     }
 
-    // ...other methods and member definitions...
+    // ...other complex methods and member definitions...
 
 }

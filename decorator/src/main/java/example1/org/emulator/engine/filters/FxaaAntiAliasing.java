@@ -19,4 +19,15 @@ public class FxaaAntiAliasing extends FrameFilter {
         return renderedFrame + " with FxaaAntiAliasing";
     }
 
+    /**
+     * <p>Imagine that antialiasing algorithms require special handling when the resolution changes.</p>
+     * <p>Note that this is the only decorator that improves this method.</p>
+     */
+    @Override
+    public String changeResolution() {
+        String newResolutionFrameBuffer = super.changeResolution();
+        // ...complex code to change resolution with antialiasing...
+        return newResolutionFrameBuffer + " with FxaaAntiAliasing";
+    }
+
 }
