@@ -30,7 +30,7 @@ public abstract class VideoGameEmulator {
     // ...other member definitions...
 
     /**
-     * Exemplifies a useful business method that is not abstract and can also be enhanced.
+     * Exemplifies a typical business method that is not abstract and can also be enhanced.
      */
     public String resolutionGraph() {
         return "VideoGameEmulator.resolutionGraph";

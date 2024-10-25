@@ -15,7 +15,7 @@ public abstract class FrameFilter extends VideoGameEmulator {
     }
 
     // We implement all abstract methods from VideoGameEmulator so that decorators
-    // are not required to implement them individually. Only the ones they require.
+    // are not required to implement them individually. Only the ones they need.
 
     @Override
     public String renderFrame() {
@@ -27,7 +27,7 @@ public abstract class FrameFilter extends VideoGameEmulator {
         return emulator.changeResolution();
     }
 
-    // Other useful non-abstract methods can also be enhanced in the same way.
+    // Other useful public non-abstract methods can also be enhanced in the same way.
 
     @Override
     public String resolutionGraph() {
