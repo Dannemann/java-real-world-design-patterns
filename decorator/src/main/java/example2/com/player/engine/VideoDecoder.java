@@ -39,9 +39,9 @@ public class VideoDecoder {
     /**
      * <p>Using <code>new Decorator1(new Decorator2(new MainObject()))</code>, as shown
      * in the first example (package <code>example1.org.emulator</code>), fully
-     * decouples decorators from the main component, making it agnostic to any
-     * applied decorators. This approach, however, adds complexity.</p>
-     * <p>Alternatively, with strategies, decorators are coupled to
+     * decouples Decorators from the main component, making it agnostic to any
+     * applied decorator. This approach, however, adds complexity.</p>
+     * <p>Alternatively, with Strategies, decorators are coupled to
      * <code>VideoDecoder</code> (the main component), which is now aware of them.
      * The benefit is a simpler implementation.</p>
      */
