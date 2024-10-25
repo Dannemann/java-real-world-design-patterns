@@ -17,12 +17,12 @@ public class Main {
     public static void main(String[] args) {
         VideoGameEmulator decoratedEmulator;
 
-        // The user starts the PlayStation emulator with only bilinear filtering...
+        // The user starts the PlayStation emulator with only bilinear filtering.
         videoGameEmulator = new PlayStationEmulator();
         decoratedEmulator = new BilinearFiltering(videoGameEmulator);
         System.out.println(decoratedEmulator.renderFrame());
 
-        // The user adds other filters to enhance the image quality...
+        // The user adds other filters to enhance the image quality.
         decoratedEmulator = new BilinearFiltering(new FxaaAntiAliasing(new SharpenFilter(videoGameEmulator)));
         System.out.println(decoratedEmulator.renderFrame());
 
@@ -31,7 +31,7 @@ public class Main {
         videoGameEmulator.resolutionY = 600;
         System.out.println(decoratedEmulator.changeResolution());
 
-        // The user now decides to play Nintendo64 with the same filters...
+        // The user now decides to play Nintendo64 with the same filters.
         videoGameEmulator = new Nintendo64Emulator();
         decoratedEmulator = new BilinearFiltering(new FxaaAntiAliasing(new SharpenFilter(videoGameEmulator)));
         System.out.println(decoratedEmulator.renderFrame());
