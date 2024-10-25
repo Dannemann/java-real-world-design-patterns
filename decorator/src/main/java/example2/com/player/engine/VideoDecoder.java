@@ -7,11 +7,6 @@ import java.util.List;
 
 /**
  * <p>The video rendering engine. Generates each frame the user sees on screen.</p>
- * <p>This time, let's imagine this is a heavyweight class that was initially
- * written without a <b>Component</b> abstract class or interface. Because its
- * instantiation is heavy, we can't inherit it for decoration. By doing it this
- * way, I can show you that you only need the <b>ConcreteComponent</b> to apply
- * the pattern.</p>
  * <p>This is the <b>ConcreteComponent</b> UML actor.</p>
  */
 public class VideoDecoder {
