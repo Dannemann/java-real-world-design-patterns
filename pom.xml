@@ -27,6 +27,7 @@
 
 	<modules>
 		<module>adapter</module>
+		<module>decorator</module>
 		<module>facade</module>
 		<module>observer</module>
 		<module>singleton</module>
