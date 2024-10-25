@@ -18,9 +18,9 @@ public class MapEngine {
     /**
      * <p>Triggers route calculation using the selected strategy.</p>
      * <p>This method passes the current instance of this class as an argument,
-     * allowing the strategy to access all its public members. Note that this
-     * approach is optional. You could pass each parameter individually if that
-     * better suits your design preferences.</p>
+     * allowing Strategies to access all public members. Note that this approach is
+     * optional. If you need Strategies decoupled from <code>MapEngine</code>, you
+     * could pass each parameter individually.</p>
      */
     public Object calculateRoute() {
         // ...complex code to transform parameters, call other methods, etc...
