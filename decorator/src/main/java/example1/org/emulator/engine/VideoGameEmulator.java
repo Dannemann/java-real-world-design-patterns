@@ -37,7 +37,7 @@ public abstract class VideoGameEmulator {
     }
 
     /**
-     * Exemplifies a generic business method dependent of both abstract methods. Not part of the pattern.
+     * Exemplifies a generic business method dependent of both abstract methods (not part of the pattern).
      */
     public void executeResolutionChange() {
         // ...executing preparations and other logic...

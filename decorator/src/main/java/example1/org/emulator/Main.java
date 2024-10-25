@@ -31,12 +31,12 @@ public class Main {
         videoGameEmulator.resolutionY = 600;
         System.out.println(decoratedEmulator.changeResolution());
 
-        // The user now decides to play Nintendo64 with the same filters.
+        // The user now decides to play Nintendo64 with the same filters...
         videoGameEmulator = new Nintendo64Emulator();
         decoratedEmulator = new BilinearFiltering(new FxaaAntiAliasing(new SharpenFilter(videoGameEmulator)));
         System.out.println(decoratedEmulator.renderFrame());
 
-        // But Nintendo64 also needs to enhance the resolution graph for some filters.
+        // ...but Nintendo64 also needs to enhance the resolution graph for some filters.
         System.out.println(decoratedEmulator.resolutionGraph());
     }
 

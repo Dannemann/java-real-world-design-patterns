@@ -20,7 +20,7 @@ public class SharpenFilter extends FrameFilter {
     }
 
     /**
-     * <p>Imagine that sharpen algorithms require special handling when the resolution changes.</p>
+     * <p>Imagine that sharpen algorithms require special handling for some consoles.</p>
      * <p>Note that this is a typical method in <code>VideoGameEmulator</code>.</p>
      */
     @Override
