@@ -8,6 +8,9 @@ import com.audio.data.Subject;
  */
 public interface Observer {
 
+	/**
+	 * Adding extra parameters when necessary is a standard approach.
+	 */
     void subjectUpdated(Subject subject);
 
 }

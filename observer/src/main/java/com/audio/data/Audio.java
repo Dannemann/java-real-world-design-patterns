@@ -13,8 +13,7 @@ import java.util.Set;
  * pitch, reverb, delay, equalization, and apply many other audio effects.</p>
  * <p>When this occurs, all widgets that rely on the data must be notified to
  * update themselves, ensuring they reflect the most recent update. A typical
- * scenario is adjusting one slider while the others automatically adjust in
- * response.</p>
+ * scenario is moving a slider while the others automatically adjust in response.</p>
  * <p>Since this class serves as the central access point for this data
  * (<code>audioData</code>), it is implemented as a <code>Subject</code> to
  * facilitate notifying its observers when updates happen.</p>

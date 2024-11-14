@@ -16,10 +16,7 @@ public class Slider implements Observer {
 	// ...instance variables and other members...
 
 	/**
-	 * A Slider can modify audio properties, but it is not intended to alter the
-	 * project settings data object. Therefore, we store a reference only to the
-	 * <code>audio</code> subject, as it is the only data object this widget needs
-	 * to modify. By updating the state of <code>audio</code>, all other dependent
+	 * By updating the state of <code>audio</code>, all other dependent
 	 * widgets (including this one) are notified and updated accordingly.
 	 */
 	private Audio audio;
