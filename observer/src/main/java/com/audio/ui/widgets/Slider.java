@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class Slider implements Observer {
 
-    // ...project-specific slider implementation...
+	// ...instance variables and other members...
 
 	/**
 	 * A Slider can modify audio properties, but it is not intended to alter the
@@ -32,10 +32,8 @@ public class Slider implements Observer {
 			// multiple UI widgets. For instance, if the user changes the main input device
 			// for recording, certain components may require a render update to reflect the
 			// new configuration.
-			// ...fetch properties from projectSettings and update the widget...
 			System.out.println("Slider.subjectUpdated: Project settings changes rendered.");
 		} else {
-			// ...fetch properties from Subject and update the widget...
 			System.out.println("Slider.subjectUpdated: Audio properties changes rendered.");
 		}
 	}
@@ -55,6 +53,6 @@ public class Slider implements Observer {
 		this.audio = audio;
 	}
 
-    // ...project-specific slider implementation...
+	// ...other methods and members...
 
 }

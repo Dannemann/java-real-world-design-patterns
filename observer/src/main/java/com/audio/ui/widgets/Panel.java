@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class Panel implements Observer {
 
-	// ...project-specific panel implementation...
+	// ...instance variables, methods and other members...
 
 	@Override
 	public void subjectUpdated(Subject subject) {
@@ -24,6 +24,6 @@ public class Panel implements Observer {
 		}
 	}
 
-	// ...project-specific panel implementation...
+	// ...
 
 }
