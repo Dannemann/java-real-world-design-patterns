@@ -35,6 +35,10 @@ public interface Subject {
         getObservers().clear();
     }
 
+    /**
+     * Adding extra parameters when necessary is a standard approach.
+     * They can be passed to <code>subjectUpdated</code>.
+     */
     default void notifyObservers() {
         System.out.println("Subject.notifyObservers: " + getClass().getSimpleName() + " state changed. Notifying " + getObservers().size() + " observers.");
         for (Observer observer : getObservers())
