@@ -21,7 +21,7 @@ public class SharpenFilter extends FrameFilter {
 
     /**
      * <p>Imagine that sharpen algorithms require special handling for some consoles.</p>
-     * <p>Note that this is a typical method in <code>VideoGameEmulator</code>.</p>
+     * <p>Note that this method is not abstract.</p>
      */
     @Override
     public String resolutionGraph() {

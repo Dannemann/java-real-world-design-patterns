@@ -36,16 +36,6 @@ public abstract class VideoGameEmulator {
         return "VideoGameEmulator.resolutionGraph";
     }
 
-    /**
-     * Exemplifies a generic business method dependent of both abstract methods (not part of the pattern).
-     */
-    public void executeResolutionChange() {
-        // ...executing preparations and other logic...
-        changeResolution();
-        renderFrame();
-        // ...resuming the game...
-    }
-
     // ...
 
 }
